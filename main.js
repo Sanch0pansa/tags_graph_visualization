@@ -123,6 +123,9 @@ class Tag {
                 e.preventDefault();
                 this.element.contentEditable = false;
             }
+            if (e.key == "Space") {
+                e.stopPropagation();
+            }
         });
 
         this.element.addEventListener('input', e => {
@@ -430,7 +433,7 @@ const applySettingsButton = $("#apply-settings");
 
 getJsonBtn.onclick = () => {
     let data = localStorage.getItem('data');
-    dataSaving.innerText = data;
+    dataSaving.value = data;
 }
 
 putJsonBtn.onclick = () => {
