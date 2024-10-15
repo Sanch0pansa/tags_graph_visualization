@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="tags-space" id="tags-space">
+        </div>
+        <div class="panel">
+            <div class="panel-group">
+                <h2>Панель инструментов</h2>
+            </div>
+
+            <div class="panel-group">
+                <h2>Настройки симуляции</h2>
+                <button class="btn" id="start-simulation">Запустить симуляцию</button>
+                <div class="input-group">
+                    <label for="ideal-length">Размер ребра графа</label>
+                    <input class="form-control" name="data-saving" id="ideal-length" value="0.15" type="number"/>
+                </div>
+                <div class="input-group">
+                    <label for="elasticy-coefficient">Коэффициент упругости</label>
+                    <input class="form-control" name="elasticy-coefficient" id="elasticy-coefficient" value="0.01" type="number"/>
+                </div>
+                <div class="input-group">
+                    <label for="repulsion-coefficient">Коэффициент отталкивания</label>
+                    <input class="form-control" name="repulsion-coefficient" id="repulsion-coefficient" value="0.00001" type="number"/>
+                </div>
+                <div class="input-group">
+                    <label for="friction-coefficient">Коэффициент трения</label>
+                    <input class="form-control" name="friction-coefficient" id="friction-coefficient" value="0.1" type="number"/>
+                </div>
+                <button class="btn" id="apply-settings">Применить настройки</button>
+            </div>
+
+            <div class="panel-group">
+                <div class="tabs">
+                    <div class="tab active" id="tags-tool" data-tab-group="1" data-tab="1">Теги</div>
+                    <div class="tab" id="links-tool" data-tab-group="1" data-tab="2">Связи</div>
+                </div>
+            </div>
+            
+            <div class="panel-group">
+                <h2>Сохранение тегов</h2>
+                <button class="btn" id="get-json">Сформировать JSON</button>
+                <div class="input-group">
+                    <textarea class="form-control" name="data-saving" id="data-saving" rows="10"></textarea>
+                </div>
+                <button class="btn" id="put-json">Вставить JSON</button>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
